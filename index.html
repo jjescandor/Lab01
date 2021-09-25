@@ -1,0 +1,100 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <title>Can you sit with us</title>
+    <link rel="stylesheet" href="css/styles.css?v=1.0">
+    <style>
+        body {
+            background-color: purple;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        h3 {
+            color: blue;
+        }
+
+        section {
+            display: flex;
+        }
+
+        li {
+            margin-bottom: 16px;
+        }
+    </style>
+</head>
+
+
+<!-- your content here... -->
+<header>
+
+</header>
+
+<body>
+    <h1>Class 1 Lab</h1>
+    <img src='https://res.cloudinary.com/dxg5jg10h/image/upload/v1632600849/cyrstal_ball_ibcmbn.jpg' alt='turtle image'
+        style="border-radius: 10%;" />
+    <p>Profile Analysis</p>
+    <section>
+        <div>
+            <p style="color:orange;">Where are you from?</p>
+            <p style="color:blue;">What is your favorite flavor of ice cream</p>
+            <p style="color:yellow;">Are you a dog or cat person</p>
+            <p style="color:chartreuse;">Lights On or Off?</p>
+        </div>
+        <ul style="color:green;"></ul>
+    </section>
+    <h2>Here is your future:</h2>
+
+    <script>
+        let name = prompt("What is your name?");
+        console.log(name);
+        alert("Welcome to online crystal ball reading " + name + ". Before we begin, tell me about yourself");
+        let place = prompt("Where are you from?");
+        console.log(place);
+        let favorite = prompt("What is your favorite flavor of ice cream");
+        console.log(favorite);
+        let pet = prompt("Are you a dog or cat person");
+        console.log(pet);
+        let lights = prompt("Lights On or Off?");
+        console.log(lights);
+
+        const placeDesc = [`${place} is alright`, `${place} is amazing`, `${place} is boring`, `${place} really?`];
+        const petDesc = [`I love ${pet} people`, `I hate ${pet} people`, `${pet} is a good pet`, `${pet} is a bad pet`];
+        const favoriteDesc = [`${favorite} is delicious`, `${favorite} is also my favorite`, `${favorite} really?`, `${favorite} is a great choice`];
+        const lightDesc = [`lights ${lights} - gross`, `lights ${lights} - what would your mother say`, `lights ${lights} - TMI`, `lights ${lights} - HA.`];
+
+        let randomNum = Math.floor(Math.random() * 3);
+
+        const fortune = ['The love of your life is right in front of your eyes.', `A beautiful, smart, and loving person will be coming into your life`, `A hunch is creativity trying to tell you something.`, `A golden egg of opportunity falls into your lap this month`];
+
+        let list = document.querySelector("ul");
+        let bodyOne = document.querySelector("body");
+
+        let messageOne = document.createElement("li");
+        messageOne.textContent = placeDesc[randomNum];
+        list.appendChild(messageOne);
+
+        let messageTwo = document.createElement("li");
+        messageTwo.textContent = favoriteDesc[randomNum];
+        list.appendChild(messageTwo);
+
+        let messageThree = document.createElement("li");
+        messageThree.textContent = petDesc[randomNum];
+        list.appendChild(messageThree);
+
+        let messageFour = document.createElement("li");
+        messageFour.textContent = lightDesc[randomNum];
+        list.appendChild(messageFour);
+
+
+        let fortuneTeller = document.createElement("h3");
+        fortuneTeller.textContent = fortune[randomNum];
+        bodyOne.appendChild(fortuneTeller);
+    </script>
+</body>
+
+</html>
